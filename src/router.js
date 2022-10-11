@@ -4,6 +4,12 @@ import App from './App';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const Admin = lazy(() => import('./pages/Admin/Admin'));
+const AdminRecipes = lazy(() =>
+  import('./pages/Admin/pages/AdminRecipes/AdminRecipes')
+);
+const AdminUsers = lazy(() =>
+  import('./pages/Admin/pages/AdminUsers/AdminUsers')
+);
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +38,10 @@ export const router = createBrowserRouter([
               },
               {
                 path: 'new',
+                element: <AdminRecipesForm />,
+              },
+              {
+                path: 'edit',
                 element: <AdminRecipesForm />,
               },
             ],
