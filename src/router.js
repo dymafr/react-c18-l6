@@ -17,6 +17,26 @@ export const router = createBrowserRouter([
       {
         path: 'admin',
         element: <Admin />,
+        children: [
+          {
+            path: 'recipes',
+            element: <AdminRecipes />,
+            children: [
+              {
+                index: true,
+                loader: async () => redirect('/admin/recipes/list'),
+              },
+              {
+                path: 'list',
+                element: <AdminRecipesList />,
+              },
+              {
+                path: 'new',
+                element: <AdminRecipesForm />,
+              },
+            ],
+          },
+        ],
       },
     ],
   },
