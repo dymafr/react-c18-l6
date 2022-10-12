@@ -1,4 +1,4 @@
-const RECIPE_API = 'https://restapi.fr/api/recipes';
+const RECIPE_API = 'https://restapi.fr/api/recipes2';
 
 export async function getRecipes(queryParam) {
   const response = await fetch(
