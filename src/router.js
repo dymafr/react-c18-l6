@@ -4,11 +4,23 @@ import App from './App';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const Admin = lazy(() => import('./pages/Admin/Admin'));
+const Admin = lazy(() => import('./pages/Admin/Admin'));
 const AdminRecipes = lazy(() =>
   import('./pages/Admin/pages/AdminRecipes/AdminRecipes')
 );
 const AdminUsers = lazy(() =>
   import('./pages/Admin/pages/AdminUsers/AdminUsers')
+);
+
+const AdminRecipesList = lazy(() =>
+  import(
+    './pages/Admin/pages/AdminRecipes/pages/AdminRecipesList/AdminRecipesList'
+  )
+);
+const AdminRecipesForm = lazy(() =>
+  import(
+    './pages/Admin/pages/AdminRecipes/pages/AdminRecipesForm/AdminRecipesForm'
+  )
 );
 
 export const router = createBrowserRouter([
@@ -45,6 +57,10 @@ export const router = createBrowserRouter([
                 element: <AdminRecipesForm />,
               },
             ],
+          },
+          {
+            path: 'users',
+            element: <AdminUsers />,
           },
         ],
       },
