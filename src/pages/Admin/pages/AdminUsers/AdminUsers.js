@@ -1,5 +1,5 @@
 import React from 'react';
 
-export function AdminUsers() {
+export default function AdminUsers() {
   return <h3>AdminUsers</h3>;
 }
